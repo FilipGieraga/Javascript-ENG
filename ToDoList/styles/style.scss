@@ -1,0 +1,192 @@
+$primarycolor: #ff665a;
+$orangec: #ff8c64;
+$yellowc: #fff587;
+$darkc: #7d6b7d;
+$psize: 18px;
+$ffamily1: "Staatliches", cursive;
+$ffamily2: "Righteous", cursive;
+
+$greyc: #a3a1a8;
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+body {
+  margin: 0;
+  background-color: $greyc;
+}
+
+.container {
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 50vw;
+  height: 20vh;
+  display: flex;
+  background-color: $primarycolor;
+  flex-direction: column;
+  box-shadow: 3px 3px 5px $darkc;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  h1 {
+    font-family: $ffamily1;
+    letter-spacing: 8px;
+    font-size: 40px;
+    color: $yellowc;
+    margin: 0;
+  }
+  .td {
+    padding: 10px 0;
+    background-color: $primarycolor;
+  }
+  .createnew {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 70%;
+
+    & > input {
+      flex: 0 1 10%;
+      margin: 0.5rem;
+      &[type="newTask"] {
+        flex: 1 1 10%;
+      }
+    }
+  }
+
+  input {
+    border: none;
+    background: $yellowc;
+    font-family: $ffamily2;
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+
+    &[type="submit"] {
+      background: $orangec;
+      color: $darkc;
+      box-shadow: 1px 1px 5px $darkc;
+      &:hover {
+        background: $yellowc;
+      }
+    }
+    &[type="button"] {
+      background: $orangec;
+      color: $darkc;
+      box-shadow: 1px 1px 5px $darkc;
+      &:hover {
+        background: $greyc;
+      }
+    }
+  }
+}
+
+.listtask {
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 50vw;
+  height: 10vh;
+  background-color: $yellowc;
+  border-radius: 12px;
+  box-shadow: 1px 1px 5px $darkc;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-evenly;
+  // align-items: center;
+  .edittask {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    gap: 10px;
+    justify-content: space-evenly;
+
+    & > input {
+      flex: 1 0 30%;
+      height: 40px;
+      font-size: 14px;
+      align-self: center;
+      margin: 0.5rem;
+    }
+    input {
+      color: $orangec;
+      border: none;
+      background: $yellowc;
+      font-family: $ffamily2;
+      border-radius: 12px;
+      padding: 0 1rem;
+      &[type="newTask"] {
+        margin-left: -15px;
+        &::placeholder {
+          color: $orangec;
+          opacity: 1;
+        }
+      }
+      &[value="Save"] {
+        background: $yellowc;
+        align-self: center;
+        flex: 0 1 10%;
+        color: $darkc;
+        height: 40px;
+        border: 2px solid $darkc;
+        &:hover {
+          background: $orangec;
+        }
+      }
+      &[value="Discard"] {
+        align-self: center;
+        flex: 0 1 10%;
+        background: $yellowc;
+        color: $darkc;
+        border: 2px solid $darkc;
+        height: 40px;
+
+        &:hover {
+          background: $greyc;
+        }
+      }
+    }
+  }
+}
+
+.note {
+  flex: 0 0 70%;
+  align-self: center;
+  h3 {
+    font-family: $ffamily2;
+    font-weight: 20;
+    padding-left: 20px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    background-color: $yellowc;
+    color: $primarycolor;
+  }
+}
+
+.icons {
+  flex: 0 0 20%;
+  align-self: center;
+  justify-self: flex-end;
+  padding-left: 10px;
+  background-color: $yellowc;
+}
+
+// btn
+.btn {
+  width: 40px;
+  position: relative;
+  height: 40px;
+  border: 2px solid $darkc;
+  border-radius: 12px;
+  background-color: $yellowc;
+
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.btn:hover {
+  background-color: $orangec;
+  transition: 0.5 linear;
+}

@@ -1,0 +1,430 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+* {
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  width: 60vw;
+  height: 80vh;
+  margin: 0 auto;
+  background-color: black;
+  border: solid 2px orange;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  gap: 0px 0px;
+  grid-auto-flow: row;
+      grid-template-areas: "a1 a2 a3 a4 a5 a6" "b1 b2 b3 b4 b5 b6" "c1 c2 c3 c4 c5 c6" "d1 d2 d3 d4 d5 d6" "e1 e2 e3 e4 e5 e6";
+}
+
+.container .btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  font-size: 26px;
+  letter-spacing: 5px;
+  font-family: "Bebas Neue", cursive;
+}
+
+.container .btn-start {
+  cursor: pointer;
+  color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.container .btn-restart {
+  color: black;
+}
+
+.container .btn-start::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.container .btn-restart::before {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.container .btn-start:hover::before {
+  opacity: 0;
+  -webkit-transform: scale(0.5, 0.5);
+          transform: scale(0.5, 0.5);
+}
+
+.container .btn-start::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+.container .btn-restart::after {
+  border: 1px solid black;
+}
+
+.container .btn-restart:hover::after {
+  color: white;
+}
+
+.container .btn-start:hover::after {
+  opacity: 1;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.Score {
+  margin-top: 20px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  grid-area: Score;
+  font-size: 26px;
+  letter-spacing: 5px;
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
+}
+
+.Restart {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  grid-area: Restart;
+  position: absolute;
+  left: 15vw;
+  bottom: 10vh;
+}
+
+.Restart .btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  font-size: 26px;
+  letter-spacing: 5px;
+  font-family: "Bebas Neue", cursive;
+}
+
+.Restart .btn-start {
+  cursor: pointer;
+  color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.Restart .btn-restart {
+  color: black;
+}
+
+.Restart .btn-start::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.Restart .btn-restart::before {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.Restart .btn-start:hover::before {
+  opacity: 0;
+  -webkit-transform: scale(0.5, 0.5);
+          transform: scale(0.5, 0.5);
+}
+
+.Restart .btn-start::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+.Restart .btn-restart::after {
+  border: 1px solid black;
+}
+
+.Restart .btn-restart:hover::after {
+  color: white;
+}
+
+.Restart .btn-start:hover::after {
+  opacity: 1;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.a1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: a1;
+  position: relative;
+}
+
+.a2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: a2;
+  position: relative;
+}
+
+.a3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: a3;
+  position: relative;
+}
+
+.a4 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: a4;
+  position: relative;
+}
+
+.a5 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: a5;
+  position: relative;
+}
+
+.a6 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 6;
+  grid-area: a6;
+  position: relative;
+}
+
+.b1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: b1;
+  position: relative;
+}
+
+.b2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: b2;
+  position: relative;
+}
+
+.b3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: b3;
+  position: relative;
+}
+
+.b4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: b4;
+  position: relative;
+}
+
+.b5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 5;
+  grid-area: b5;
+  position: relative;
+}
+
+.b6 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 6;
+  grid-area: b6;
+  position: relative;
+}
+
+.c1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: c1;
+  position: relative;
+}
+
+.c2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: c2;
+  position: relative;
+}
+
+.c3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: c3;
+  position: relative;
+}
+
+.c4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: c4;
+  position: relative;
+}
+
+.c5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+  grid-area: c5;
+  position: relative;
+}
+
+.c6 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 6;
+  grid-area: c6;
+  position: relative;
+}
+
+.d1 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: d1;
+  position: relative;
+}
+
+.d2 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: d2;
+  position: relative;
+}
+
+.d3 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: d3;
+  position: relative;
+}
+
+.d4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: d4;
+  position: relative;
+}
+
+.d5 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 5;
+  grid-area: d5;
+  position: relative;
+}
+
+.d6 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 6;
+  grid-area: d6;
+  position: relative;
+}
+
+.e1 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: e1;
+  position: relative;
+}
+
+.e2 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: e2;
+  position: relative;
+}
+
+.e3 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: e3;
+  position: relative;
+}
+
+.e4 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 4;
+  grid-area: e4;
+  position: relative;
+}
+
+.e5 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5;
+  grid-area: e5;
+  position: relative;
+}
+
+.e6 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 6;
+  grid-area: e6;
+  position: relative;
+}
+
+.dot {
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot:hover {
+  background-color: white;
+}
+/*# sourceMappingURL=style.css.map */

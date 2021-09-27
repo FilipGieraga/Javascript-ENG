@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cols">
+        <div class="col1">
+          <img src="styles/paper.png" class="big p" width="180px" />
+          <h3 class="smaller">Player</h3>
+          <h3>Score : <span class="playerScore">0</span></h3>
+          <div class="choose player">
+            <button class="rockbtn">
+              <img class="small" src="styles/rock.png" height="30px" />
+            </button>
+            <button class="paperbtn">
+              <img class="small" src="styles/paper.png" height="30px" />
+            </button>
+            <button class="scissorsbtn">
+              <img class="small" src="styles/scissors.png" height="30px" />
+            </button>
+          </div>
+        </div>
+        <div class="col2">
+          <img src="styles/rock.png" class="big c" width="180px" />
+          <h3 class="smaller">Computer</h3>
+          <h3>Score : <span class="computerScore">0</span></h3>
+          <div class="choose computer">
+            <button>
+              <img class="small" src="styles/rock.png" height="30px" />
+            </button>
+            <button>
+              <img class="small" src="styles/paper.png" height="30px" />
+            </button>
+            <button>
+              <img class="small" src="styles/scissors.png" height="30px" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="threecols">
+        <div class="col11">
+          <h3 class="result"></h3>
+        </div>
+        <div class="col12">
+          <button class="start">
+            <h3>ReStart</h3>
+          </button>
+        </div>
+        <div class="col13">
+          <h3>Play to:</h3>
+          <input type="number" placeholder="Default = 3" min="3" max="10" />
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

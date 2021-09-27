@@ -1,0 +1,140 @@
+$primarycolor: #ff665a;
+$orangec: #ff8c64;
+$yellowc: #fff587;
+$darkc: #7d6b7d;
+$psize: 18px;
+$ffamily1: "Staatliches", cursive;
+$ffamily2: "Righteous", cursive;
+$borderradius: 20px;
+
+$greyc: #a3a1a8;
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+body {
+  margin: 0;
+  background-color: $greyc;
+}
+.container {
+  width: 50vw;
+  height: 68vh;
+  margin: 10vh auto 10vh;
+  background-color: $primarycolor;
+  border-radius: $borderradius;
+  .cols {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    // flex-wrap: wrap;
+    // gap: 2%;
+    height: 90%;
+
+    .col1 {
+      margin-top: 5%;
+      margin-bottom: 5%;
+      border-radius: $borderradius;
+      background-color: $orangec;
+      flex: 0 1 45%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .big {
+        margin-top: 60px;
+        width: 180px;
+        height: 180px;
+        opacity: 0; //initialize image with no opacity
+        transition: ease-in 0.3s;
+      }
+      h3 {
+        font-family: $ffamily1;
+        font-size: 24px;
+        margin: 0;
+        margin-top: 10px;
+      }
+      .smaller {
+        margin: 0;
+        margin-top: 18px;
+
+        font-size: 20px;
+      }
+      button {
+        margin-top: 28px;
+        margin: 28px 10px 0 10px;
+        border-radius: 10px;
+        width: 100px;
+        height: 50px;
+        border: 3px solid $darkc;
+        transition: ease-in-out 0.5s;
+        background-color: $primarycolor;
+        &:hover {
+          background-color: #ff655a00;
+        }
+      }
+    }
+    .col2 {
+      @extend .col1;
+      background-color: $yellowc;
+      button {
+        background-color: $yellowc;
+        transition: ease-in 0.3s;
+      }
+      .selected {
+        background-color: $darkc;
+      }
+    }
+  }
+  .start {
+    margin: 0 auto;
+    margin-top: -15px;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    border: 3px solid $darkc;
+    transition: ease-in-out 0.5s;
+    background-color: $primarycolor;
+    &:hover {
+      background-color: #ff655a00;
+    }
+    // margin-top: 10px;
+    h3 {
+      margin: 0;
+      font-family: $ffamily1;
+      font-size: 24px;
+    }
+  }
+  .threecols {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    // flex-grow: 0;
+  }
+  .col11,
+  .col12,
+  .col13 {
+    display: flex;
+    flex-basis: 33%;
+    align-self: center;
+    // width: 33%;
+  }
+  .col13,
+  .col11 {
+    h3 {
+      padding-left: 50px;
+      margin: 0;
+      font-family: $ffamily1;
+      font-size: 20px;
+    }
+    input {
+      width: 80px;
+      border: 2px solid $darkc;
+
+      margin-left: 10px;
+      font-family: $ffamily1;
+      font-size: 16px;
+      border-radius: 6px;
+      text-align: center;
+    }
+  }
+}

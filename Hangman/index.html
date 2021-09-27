@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Hangman</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- INITIAL PARAMETERS -->
+
+      <div class="initial">
+        <div class="center">
+          <div class="flexrow1">
+            <h5>
+              GENERATE PASSWORD:
+              <input type="checkbox" />
+            </h5>
+
+            <h5 class="hide"><label for="lang">LANGUAGE: </label></h5>
+            <select class="langs hide" name="languages">
+              <option value="pl">PL</option>
+              <option value="eng">ENG</option>
+            </select>
+            <input
+              type="number"
+              class="hide"
+              placeholder="LETTERS 5-10"
+              min="5"
+              max="10"
+            />
+          </div>
+          <h3>INPUT PASSWORD</h3>
+          <input type="password" placeholder="MIN=5, MAX=20" />
+          <h3>HOW MANY TRIES</h3>
+          <input
+            type="number"
+            placeholder="DEFAULT=11, MIN=1, MAX=15"
+            min="1"
+            max="15"
+          />
+          <h3>CATEGORY</h3>
+          <input
+            type="text"
+            placeholder="OPTIONAL MAX=25"
+            maxlength="25"
+          /><br />
+          <button type="submit" name="startinitial">LET'S START</button>
+          <h5 class="warning1"></h5>
+        </div>
+      </div>
+
+      <!-- ACTUAL GAME -->
+
+      <div class="initial two">
+        <div class="stats">
+          <h3>PASSWORD LENGTH: <span class="spanpasslength">0</span></h3>
+          <h3>CATEGORY: <span class="spancategory">0</span></h3>
+          <h3>TIME: <span class="spantime">0</span> SECONDS</h3>
+        </div>
+        <h3>USED LETTERS:<span class="spanused"></span></h3>
+        <h1>_ _ _ _ _ _ _ _ _ _ _ _</h1>
+        <input type="text" placeholder="enter a letter or password" />
+        <input type="submit" value="SUBMIT" />
+        <h5>WARNING</h5>
+        <div class="triescont">
+          <h3>TRY: <span class="spantry">0</span></h3>
+          <h3>TRIES LEFT: <span class="spantriesleft">0</span></h3>
+          <button>RESTART</button>
+        </div>
+      </div>
+
+      <!-- FINAL RESULT -->
+    </div>
+    <script src="app.js" type="module" defer></script>
+  </body>
+</html>
