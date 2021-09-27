@@ -1,13 +1,6 @@
 "use strict";
-let complete = document.querySelectorAll(".complete");
-let remove = document.querySelectorAll(".remove");
-let edit = document.querySelectorAll(".edit");
 const addNew = document.querySelector(".add");
-const l1 = document.querySelector(".listtask");
-const l2 = document.querySelectorAll(".listtask");
 const createNew = document.querySelector(".createnew");
-const backToPlus = document.querySelector('input[value="Escape"]');
-const taskAdder = document.querySelector('input[value="Add"]');
 const allTasks = document.querySelector(".alltasks");
 createNew.style.display = "none";
 let data = 1;
@@ -16,13 +9,21 @@ if (localStorage.getItem("content")) {
   if (localStorage.getItem("content").trim()) {
     allTasks.insertAdjacentHTML("afterbegin", localStorage.getItem("content"));
     data = localStorage.getItem("dataAtr").trim();
-    eventListenersForECR();
   }
 }
+const container = document.querySelector(".container");
+container.addEventListener("click", function (e) {
+  e.preventDefault();
+  const elem = e.target;
+  console.log();
+  if (elem.closest("div").classList.contains("add")) revealCreateForm();
+  if (elem.value === "Add") taskAdded();
+  if (elem.value === "Escape") hideCreateForm();
+});
 
-function taskDone(e) {
+function taskDone(elem) {
   if (activeEdit) return;
-  const currentTask = this.closest(".listtask").getAttribute("data-task");
+  const currentTask = elem.closest(".listtask").getAttribute("data-task");
   const taskByData = document.querySelector(`[data-task='${currentTask}']`);
   const textContentH3 = taskByData.querySelector("h3");
   //   textContentH3.textContent = "sasd"
@@ -34,9 +35,17 @@ function taskDone(e) {
   localStorage.setItem(`content`, allTasks.innerHTML);
 }
 
-function taskRemove(e) {
+allTasks.addEventListener("click", function (e) {
+  const elem = e.target.closest(".btn");
+  if (!elem) return;
+  if (elem.classList.contains("complete")) taskDone(elem);
+  if (elem.classList.contains("edit")) editTask(elem);
+  if (elem.classList.contains("remove")) taskRemove(elem);
+});
+
+function taskRemove(elem) {
   if (activeEdit) return;
-  const currentTask = this.closest(".listtask").getAttribute("data-task");
+  const currentTask = elem.closest(".listtask").getAttribute("data-task");
   const taskByData = document.querySelector(`[data-task='${currentTask}']`);
   taskByData.remove();
   localStorage.setItem(`content`, allTasks.innerHTML);
@@ -55,7 +64,6 @@ function hideCreateForm() {
 }
 
 function taskAdded(e) {
-  e.preventDefault();
   if (activeEdit) return;
   let inputVal = document.querySelector('input[type="newTask"]');
 
@@ -83,33 +91,16 @@ function taskAdded(e) {
   allTasks.insertAdjacentHTML("afterbegin", htmlToAddTask);
   localStorage.setItem(`content`, allTasks.innerHTML);
   localStorage.setItem(`dataAtr`, data);
-  eventListenersForECR();
+  // eventListenersForECR();
 }
 
-function eventListenersForECR() {
-  complete = document.querySelectorAll(".complete");
-  remove = document.querySelectorAll(".remove");
-  edit = document.querySelectorAll(".edit");
-  for (let i = 0; i < complete.length; i++) {
-    complete[i].addEventListener("click", taskDone);
-  }
-
-  for (let i = 0; i < remove.length; i++) {
-    remove[i].addEventListener("click", taskRemove);
-  }
-  for (let i = 0; i < edit.length; i++) {
-    edit[i].addEventListener("click", editTask);
-  }
-}
-
-function editTask(e) {
-  e.preventDefault();
+function editTask(elem) {
   if (!activeEdit) {
     activeEdit = true;
   } else {
     return;
   }
-  const currentTask = this.closest(".listtask").getAttribute("data-task");
+  const currentTask = elem.closest(".listtask").getAttribute("data-task");
   const taskByData = document.querySelector(`[data-task='${currentTask}']`);
   const notePart = taskByData.querySelector(".note");
   const textContentH3 = taskByData.querySelector("h3"); ///// added
@@ -147,7 +138,6 @@ function editTask(e) {
       return;
     } else {
       let edited = inputVal.value.trim();
-      // const textContentH3 = taskByData.querySelector("h3");
       hideForm();
       textContentH3.textContent = edited;
       localStorage.setItem(`content`, allTasks.innerHTML);
@@ -155,10 +145,4 @@ function editTask(e) {
     }
     // textContentH3.style.textDecoration = "";
   });
-
-  // textContentH3.textContent = "sasd"
 }
-
-taskAdder.addEventListener("click", taskAdded);
-addNew.addEventListener("click", revealCreateForm);
-backToPlus.addEventListener("click", hideCreateForm);
