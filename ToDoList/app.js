@@ -45,9 +45,7 @@ allTasks.addEventListener("click", function (e) {
 
 function taskRemove(elem) {
   if (activeEdit) return;
-  const currentTask = elem.closest(".listtask").getAttribute("data-task");
-  const taskByData = document.querySelector(`[data-task='${currentTask}']`);
-  taskByData.remove();
+  elem.parentNode.parentNode.remove();
   localStorage.setItem(`content`, allTasks.innerHTML);
 }
 
