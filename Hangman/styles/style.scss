@@ -58,7 +58,7 @@ h1 {
 .initial {
   @include h3;
   width: 30vw;
-  height: 50vh;
+  height: 55vh;
   margin: 25vh auto 25vh;
   background-color: $white;
   border-radius: $borderradius;
@@ -181,5 +181,46 @@ input {
     &:hover {
       background-color: $bluedark;
     }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  h1 {
+    font-size: 30px;
+  }
+  .initial {
+    min-width: 450px;
+    height: 500px;
+    // margin: 0 ;
+    margin: auto;
+  }
+
+  .container {
+    margin: 100px auto;
+  }
+
+  .two .triescont {
+    width: 100%;
+    padding-top: 20px;
+  }
+}
+
+
+
+@media screen and (max-width: 1064px) {
+  h1 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+
+  .container {
+    width: 100vw;
+    height: 500px;
+    margin: 100px auto;
+  }
+  h1 {
+    font-size: 14px;
   }
 }
