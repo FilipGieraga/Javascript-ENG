@@ -12,7 +12,7 @@ $greyc: #a3a1a8;
 
 body {
   margin: 0;
-  background-color: $greyc;
+  background-color: #7d6b7d;
 }
 
 .container {
@@ -189,4 +189,81 @@ body {
 .btn:hover {
   background-color: $orangec;
   transition: 0.5 linear;
+}
+
+@media screen and (max-width: 1280px) {
+  .icons {
+    display: flex;
+    flex-direction: row;
+  }
+  .note {
+    flex: 0 0 55%;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .container {
+    width: 70vw;
+  }
+  .listtask {
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .td h1 {
+    font-size: 30px;
+  }
+  .listtask .edittask input[type="newTask"] {
+    width: 250px;
+    flex: 0 0 10%;
+  }
+  .listtask .edittask input[value="Discard"] {
+    width: 70px;
+    flex: 0 0 10%;
+    margin-left: -20px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .listtask .edittask input[value="Save"] {
+    width: 80px;
+    flex: 0 0 10%;
+    margin-left: -20px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .edittask {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0px;
+    flex-wrap: nowrap;
+  }
+  .createnew {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .container {
+    width: 80vw;
+  }
+  .listtask {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+  }
+  .edittask {
+    display: flex;
+    flex-direction: row;
+  }
+  .note h3 {
+    font-size: 12px;
+  }
 }
