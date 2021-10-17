@@ -146,6 +146,10 @@ h3 {
     -webkit-column-gap: 30px;
             column-gap: 30px;
   }
+  .container {
+    -webkit-transform: scaleX(1.5);
+            transform: scaleX(1.5);
+  }
 }
 
 @media screen and (max-width: 580px) {
@@ -156,6 +160,13 @@ h3 {
   }
   .other h3 {
     font-size: 15px;
+  }
+  .other .easy {
+    width: 80px;
+  }
+  .other .medium,
+  .other .hard {
+    display: none;
   }
 }
 

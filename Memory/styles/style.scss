@@ -113,6 +113,9 @@ h3 {
   .other {
     column-gap: 30px;
   }
+  .container {
+    transform: scaleX(1.5);
+  }
 }
 
 @media screen and (max-width: 580px) {
@@ -123,7 +126,17 @@ h3 {
     h3 {
       font-size: 15px;
     }
+    .easy {
+      width: 80px;
+    }
+    .medium,
+    .hard {
+      display: none;
+    }
   }
+  // .container{
+  //   transform: scaleX(1.5);
+  // }
 }
 
 @media screen and (max-height: 620px) {
