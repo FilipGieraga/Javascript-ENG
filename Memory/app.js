@@ -6,6 +6,18 @@ const buttons = document.querySelectorAll(".btn");
 
 const gridContainer = document.querySelector(".grid");
 
+console.log(localStorage);
+
+if (localStorage.getItem("hs16")) {
+  document.querySelector(".hs16").textContent = localStorage.getItem("hs16");
+}
+if (localStorage.getItem("hs24")) {
+  document.querySelector(".hs24").textContent = localStorage.getItem("hs24");
+}
+if (localStorage.getItem("hs36")) {
+  document.querySelector(".hs36").textContent = localStorage.getItem("hs36");
+}
+
 // window.onload = () => {
 //   const grid = document.querySelector(".grid");
 //   const masonry = new Masonry(grid, {
@@ -175,9 +187,18 @@ function checkWin(flippers) {
     );
   }
   let result = checkWin.every((item) => item === "true");
+  let storeLength = checkWin.length;
   if (result) {
     end.style.display = "block";
     gameStop = true;
+    let targetSpan = document.querySelector(`.hs${storeLength}`);
+    if (
+      targetSpan.textContent === "None" ||
+      Number(targetSpan.textContent) > Number(score.textContent)
+    ) {
+      targetSpan.textContent = Number(score.textContent);
+      localStorage.setItem(`hs${storeLength}`, score.textContent);
+    }
   }
 }
 
