@@ -17,9 +17,11 @@ body {
 }
 
 .container {
-  width: 50vw;
-  height: 68vh;
-  margin: 10vh auto 10vh;
+  width: 800px;
+  height: 580px;
+  margin: 0 auto;
+  margin-top: 60px;
+  // margin: 200px auto ;
   background-color: $primarycolor;
   border-radius: $borderradius;
   .cols {
@@ -28,7 +30,7 @@ body {
     justify-content: space-evenly;
     // flex-wrap: wrap;
     // gap: 2%;
-    height: 90%;
+    height: 500px;
 
     .col1 {
       margin-top: 5%;
@@ -62,7 +64,7 @@ body {
         margin-top: 28px;
         margin: 28px 10px 0 10px;
         border-radius: 10px;
-        width: 100px;
+        width: 80px;
         height: 50px;
         border: 3px solid $darkc;
         transition: ease-in-out 0.5s;
@@ -110,6 +112,7 @@ body {
     width: 90%;
     margin: 0 auto;
     justify-content: space-evenly;
+    position: relative;
     // flex-grow: 0;
   }
   .col11,
@@ -141,44 +144,66 @@ body {
   }
 }
 
-
 @media screen and (max-width: 1640px) {
-
+  .container .cols .col1 button {
+    width: 60px;
+  }
+}
+@media screen and (max-width: 1110px) {
+  .container .cols .col1 button {
+    width: 60px;
+  }
   .choose {
     display: flex;
     flex-direction: column;
 
     justify-content: space-evenly;
   }
-
-  .container {
-    width: 80vw;
-    height: 800px;
+  .container .cols .col1 button {
+    margin-bottom: 2px;
+    margin-top: 12px;
   }
-  button {
-    margin-top: 5px;
+  .container .cols .col1 .big,
+  .container .cols .col2 .big {
+    width: 120px;
+    height: 120px;
+  }
+  .container {
+    width: 800px;
+    height: 650px;
+    margin-top: 30px;
+  }
+  .container .cols .col1,
+  .container .cols .col2 {
+    height: 500px;
+  }
+
+  .threecols {
+    padding-top: 80px;
   }
 }
 
-@media screen and (max-width: 878px) {
-
+@media screen and (max-width: 800px) {
   .container {
     margin-top: 0;
     width: 100vw;
-    height: 100vh;
+    height: 760px;
   }
   .container .threecols {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 200px;
-    margin-top: 0px;
+    padding-top: 60px;
   }
-  .container .cols{
-    height: 70%;
+  .container .col13 h3,
+  .container .col11 h3 {
+    padding-left: 0px;
+    margin: none;
+    margin-bottom: 10px;
   }
-  .col1,.col2{
-    height: 600px;
+
+  .container .threecols > * {
+    margin-top: 20px;
   }
 }

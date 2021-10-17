@@ -6,9 +6,10 @@ body {
 }
 
 .container {
-  width: 50vw;
-  height: 68vh;
-  margin: 10vh auto 10vh;
+  width: 800px;
+  height: 580px;
+  margin: 0 auto;
+  margin-top: 60px;
   background-color: #ff665a;
   border-radius: 20px;
 }
@@ -24,7 +25,7 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  height: 90%;
+  height: 500px;
 }
 
 .container .cols .col1, .container .cols .col2 {
@@ -73,7 +74,7 @@ body {
   margin-top: 28px;
   margin: 28px 10px 0 10px;
   border-radius: 10px;
-  width: 100px;
+  width: 80px;
   height: 50px;
   border: 3px solid #7d6b7d;
   -webkit-transition: ease-in-out 0.5s;
@@ -136,6 +137,7 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  position: relative;
 }
 
 .container .col11,
@@ -170,6 +172,15 @@ body {
 }
 
 @media screen and (max-width: 1640px) {
+  .container .cols .col1 button, .container .cols .col2 button {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .container .cols .col1 button, .container .cols .col2 button {
+    width: 60px;
+  }
   .choose {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -182,20 +193,34 @@ body {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  .container {
-    width: 80vw;
-    height: 800px;
+  .container .cols .col1 button, .container .cols .col2 button {
+    margin-bottom: 2px;
+    margin-top: 12px;
   }
-  button {
-    margin-top: 5px;
+  .container .cols .col1 .big, .container .cols .col2 .big,
+  .container .cols .col2 .big {
+    width: 120px;
+    height: 120px;
+  }
+  .container {
+    width: 800px;
+    height: 650px;
+    margin-top: 30px;
+  }
+  .container .cols .col1, .container .cols .col2,
+  .container .cols .col2 {
+    height: 500px;
+  }
+  .threecols {
+    padding-top: 80px;
   }
 }
 
-@media screen and (max-width: 878px) {
+@media screen and (max-width: 800px) {
   .container {
     margin-top: 0;
     width: 100vw;
-    height: 100vh;
+    height: 760px;
   }
   .container .threecols {
     display: -webkit-box;
@@ -211,14 +236,16 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 200px;
-    margin-top: 0px;
+    padding-top: 60px;
   }
-  .container .cols {
-    height: 70%;
+  .container .col13 h3,
+  .container .col11 h3 {
+    padding-left: 0px;
+    margin: none;
+    margin-bottom: 10px;
   }
-  .col1, .container .cols .col2, .col2 {
-    height: 600px;
+  .container .threecols > * {
+    margin-top: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
