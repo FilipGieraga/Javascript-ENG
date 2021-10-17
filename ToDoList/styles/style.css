@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 body {
   margin: 0;
-  background-color: #a3a1a8;
+  background-color: #7d6b7d;
 }
 
 .container {
@@ -266,5 +266,122 @@ body {
   background-color: #ff8c64;
   -webkit-transition: 0.5 linear;
   transition: 0.5 linear;
+}
+
+@media screen and (max-width: 1280px) {
+  .icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .note {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 55%;
+            flex: 0 0 55%;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .container {
+    width: 70vw;
+  }
+  .listtask {
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .td h1 {
+    font-size: 30px;
+  }
+  .listtask .edittask input[type="newTask"] {
+    width: 250px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 10%;
+            flex: 0 0 10%;
+  }
+  .listtask .edittask input[value="Discard"] {
+    width: 70px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 10%;
+            flex: 0 0 10%;
+    margin-left: -20px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .listtask .edittask input[value="Save"] {
+    width: 80px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 10%;
+            flex: 0 0 10%;
+    margin-left: -20px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .edittask {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 0px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .createnew {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container {
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .container {
+    width: 80vw;
+  }
+  .listtask {
+    width: 80vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .edittask {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .note h3 {
+    font-size: 12px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
