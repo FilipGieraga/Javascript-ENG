@@ -185,7 +185,7 @@ addToMenuBtn.addEventListener("click", function () {
     );
   }
   new Pizza(
-    `CustomPizza${Pizza.counter + 1}`,
+    `Custom${Pizza.counter + 1}`,
     tempPizzaContainer.pings,
     tempPizzaContainer.ps,
     tempPizzaContainer.pm,
