@@ -550,10 +550,11 @@ input[type="checkbox"] {
     border-radius: 12px;
   }
   .menu th {
-    display: none;
+    font-size: 10px;
   }
+  .menu .content-table th,
   .menu .content-table td {
-    padding: 8px 10px;
+    padding: 8px 8px;
   }
 
   .menu .content-table .fontbold {
@@ -665,10 +666,11 @@ input[type="checkbox"] {
     border-radius: 12px;
   }
   .menu th {
-    display: none;
+    font-size: 10px;
   }
+  .menu .content-table th,
   .menu .content-table td {
-    padding: 8px 10px;
+    padding: 8px 8px;
   }
 
   .menu .content-table .fontbold {
