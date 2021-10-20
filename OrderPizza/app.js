@@ -369,14 +369,14 @@ expanderBtn.addEventListener("click", expand);
 function expand() {
   this.classList.toggle("hidden");
   if (this.classList.contains("hidden")) {
-    this.parentNode.style.left = "100vw";
-    this.parentNode.style.width = "0vw";
+    this.parentNode.style.left = "100%";
+    this.parentNode.style.width = "0%";
     setTimeout(function () {
       expanderBtn.previousElementSibling.style.display = "none";
     }, 10);
   } else {
-    this.parentNode.style.left = "80vw";
-    this.parentNode.style.width = "20vw";
+    this.parentNode.style.left = "80%";
+    this.parentNode.style.width = "20%";
     setTimeout(function () {
       expanderBtn.previousElementSibling.style.display = "block";
     }, 380);
