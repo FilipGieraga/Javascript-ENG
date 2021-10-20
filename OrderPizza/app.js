@@ -247,11 +247,10 @@ Order.total = 0;
 document.querySelector(".order-list").addEventListener("click", removeOrder);
 
 function removeOrder(e) {
-  if (e.target.tagName === "IMG") {
-    let temp = e.target.parentNode.parentNode;
+  if (e.target.tagName === "IMG" || e.target.classList.contains("delete")) {
+    let temp = e.target.closest("div");
     allOrders[temp.classList[1]].deleteFromSidebar();
     temp.remove();
-    console.log(temp);
   }
 }
 
