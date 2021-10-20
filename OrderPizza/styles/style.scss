@@ -473,7 +473,7 @@ input[type="checkbox"] {
   .single-order {
     flex-direction: column;
     p {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       margin-bottom: 0;
       text-align: center;
     }
@@ -752,5 +752,9 @@ input[type="checkbox"] {
   }
   .add-order #sizes {
     font-size: 1rem;
+  }
+  .card .card-content .single-order {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
