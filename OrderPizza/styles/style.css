@@ -743,6 +743,10 @@ input[type="checkbox"] {
   .add-order #sizes {
     font-size: 1rem;
   }
+  .card .card-content .single-order {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 @media screen and (min-width: 421px) and (max-width: 1024px) {
