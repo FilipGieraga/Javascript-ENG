@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Order Your Pizza</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <h1>Pizza <img src="styles/pizza.png" height="64px" /></h1>
+        <h2>Feast Your Eyes And Pick Your Favourite 🍕</h2>
+        <button class="create-new">Create New</button>
+        <table class="content-table">
+          <colgroup>
+            <col span="1" style="width: 65%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 5%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th></th>
+              <th>30cm</th>
+              <th>40cm</th>
+              <th>52cm</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h2>Orders:</h2>
+          <div class="order-list">
+          </div>
+          <h2>Total: <span class="total">0.00$</span></h2>
+          <button class="create-new submit-order">Submit Your Order</button>
+        </div>
+
+        <button class="expander hidden">
+          <img src="styles/cart.png" width="40px" />
+        </button>
+      </div>
+    </div>
+    <div class="pop-up hide">
+      <button class="close-pop-up">&times;</button>
+
+      <div class="make-new hide">
+        <div class="display-flex-c"> 
+        <h2>Choose your ingredients:</h2>
+        <div class="ing-checks display-flex-r"></div>
+        <h2>Prices:</h2>
+        <div class="display-flex-r">
+        <h3>S: <span class="new-s-price"></span></h3>
+        <h3>M: <span class="new-m-price"></span></h3>
+        <h3>L: <span class="new-l-price"></span></h3>
+      </div>
+        <button class="add-to-menu">Add To Menu</button>
+        </div>
+      </div>
+
+      <div class="add-order hide">
+        <div class="display-flex-c">
+          <!-- <div class="display-flex-r"> -->
+        <h3>Pizza name:</h3>
+        <p class="pname"></p>
+      <!-- </div> -->
+      <!-- <div class="display-flex-r"> -->
+
+        <h3>Ingredients:</h3>
+        <p class="pings"></p>
+      <!-- </div> -->
+      <!-- <div class="display-flex-r"> -->
+        <label for="sizes">Choose size:</label>
+        <select name="sizes" id="sizes">
+          <option value="s">Small</option>
+          <option value="m">Medium</option>
+          <option value="l" selected="selected">Large</option>
+        </select>
+        <!-- </div> -->
+        <h3>Current price for 1:</h3>
+        <p><span class="pprice"></span> $</p>
+        <h3>Quantity:</h3>
+        <div class="quantity">
+          <button class="btn minus-btn disabled" type="button">-</button>
+          <input type="text" id="quantity" min="1" step="1" value="1" />
+          <button class="btn plus-btn" type="button">+</button>
+        </div>
+        <h3>Total:</h3>
+        <p class="ptotal"></p>
+        <button class="add-to-cart">Add To Cart</button>
+      </div>
+      </div>
+
+      <div class="final-submit hide">
+        <h3>Your orders:</h3>
+        <div class="final-orders labels display-flex-r">
+          <p>Order Nr.</p>
+          <p>Pizza Name</p>
+          <p>Size</p>
+          <p>Amount</p>
+          <p>Subtotal</p>
+          <hr>
+        </div>
+        <div class="final-orders list display-flex-r">
+        </div>
+          <h3>Total: <span class="final-total"></span></h2>
+        
+        <h3>Delivery details :</h3>
+        <div class="display-flex-c">
+        <input type="text" placeholder="Address" />
+        <input type="text" placeholder="Phone" />
+        <input type="text" placeholder="E-mail" />
+        <button class="send-mail">Send</button>
+      </div>
+      </div>
+
+    </div>
+
+    <div class="overlay hide"></div>
+    <script src="app.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="text/javascript">
+(function() {
+emailjs.init("user_awKUwkT8ciOd9Syk5GxiZ");
+})();
+</script>
+  </body>
+</html>
