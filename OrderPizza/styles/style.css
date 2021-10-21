@@ -4,11 +4,15 @@ p {
   margin: 0;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   background-color: #d92b04;
   font-family: "Old Standard TT", serif;
-  height: 100%;
 }
 
 .menu {
@@ -111,7 +115,7 @@ body {
 .card {
   position: absolute;
   width: 0%;
-  height: 100%;
+  min-height: 100%;
   top: 0%;
   left: 100%;
   background-color: #d96704;
@@ -717,7 +721,7 @@ input[type="checkbox"] {
   }
   .card .card-content .single-order .delete {
     padding: 2px;
-    border: 1px solid #8c03;
+    border: 1px solid #8c0303;
     margin-bottom: 0px;
   }
   .card .card-content .single-order .delete img {
