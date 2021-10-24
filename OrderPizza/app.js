@@ -101,15 +101,15 @@ Large:52cm`
 
   showAllIngs() {
     this.allIngs.forEach(function (element, index) {
-      console.log(`${index + 1}: ${element}`);
+      console.log(`${index}: ${element}`);
     });
   }
 }
 Pizza.counter = 0;
 Pizza.makeYourOwn = {
-  3: { s: 26, m: 34, l: 46 },
-  4: { s: 28, m: 36, l: 48 },
-  5: { s: 30, m: 38, l: 50 },
+  3: { s: 13, m: 17, l: 23 },
+  4: { s: 14, m: 18, l: 24 },
+  5: { s: 15, m: 19, l: 25 },
 };
 
 const pizza1 = new Pizza("Margerita", [3, 13], 10, 15, 20);
