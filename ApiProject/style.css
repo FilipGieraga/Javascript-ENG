@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap");
+
+:root {
+  --fontprimary: "Anton", sans-serif;
+  --fontsecondary: "Old Standard TT", serif;
+  --dblue: #0487D9;
+  --lblue: #94CEF2;
+  --mblue: #049DD9;
+  --nyellow: #F2CC0C;
+  --lorange: #F29849;
+}
+
+
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  background-color: var(--lorange);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: black;
+  font-family: var(--fontprimary);
+}
+
+p,
+li,
+.btn,
+span,
+label,
+input,
+textarea {
+  font-family: var(--fontsecondary);
+}
+
+h1 {
+  font-size: 56px;
+}
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 28px;
+}
+h4 {
+  font-size: 24px;
+}
+h5 {
+  font-size: 20px;
+}
+h6 {
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: var(--mblue);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--dblue);
+}
+
+.w-75{
+    background-color:var(--lblue);
+}
